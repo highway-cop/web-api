@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "pwa-node",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "openOnSessionStart",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "nodemon",
+                "--inspect"
+            ],
+            "args": [
+                "index.ts"
+            ]
+        }
+    ]
+}
