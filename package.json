@@ -1,0 +1,18 @@
+{
+    "name": "web-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/highway-cop/web-api.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/highway-cop/web-api/issues"
+    },
+    "homepage": "https://github.com/highway-cop/web-api#readme"
+}
