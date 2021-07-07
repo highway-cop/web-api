@@ -3,3 +3,6 @@
 /dist
 
 !/.vscode/launch.json
+
+.env
+*.local
