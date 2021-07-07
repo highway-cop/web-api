@@ -2,9 +2,10 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 
-import { router } from './routes/api'
-
 dotenv.config();
+
+import { router } from './routes/api'
+import Mongo from './database/connection'
 
 const app = express();
 
@@ -15,6 +16,8 @@ app.use(cors({ origin }));
 
 app.use('/api', router);
 
-app.listen(port, () => {
-    console.info(`Server running on port ::${port}`);
-});
+Mongo.connect().then(() =>
+    app.listen(port, () => {
+        console.info(`Server running on port ::${port}`);
+    })
+);
