@@ -14,5 +14,16 @@
     "bugs": {
         "url": "https://github.com/highway-cop/web-api/issues"
     },
-    "homepage": "https://github.com/highway-cop/web-api#readme"
+    "homepage": "https://github.com/highway-cop/web-api#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.9",
+        "ts-node": "^10.0.0",
+        "typescript": "^4.3.5"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mongodb": "^3.6.10"
+    }
 }
