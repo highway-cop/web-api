@@ -1,4 +1,4 @@
-interface GeoLocation {
+interface Geolocation {
 
     lat: number;
 
@@ -6,4 +6,4 @@ interface GeoLocation {
 
 }
 
-export default GeoLocation;
+export default Geolocation;

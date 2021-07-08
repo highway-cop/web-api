@@ -1,6 +1,8 @@
 import { upperCase } from 'lodash';
 
 import Accident from '../models/accident';
+import Geolocation from '../models/geolocation';
+
 import Mongo from '../database/connection';
 
 class Accidents {
