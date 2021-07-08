@@ -1,7 +1,7 @@
-import { upperCase } from 'lodash'
+import { upperCase } from 'lodash';
 
-import Mongo from '../database/connection'
-import Accident from '../models/accident'
+import Accident from '../models/accident';
+import Mongo from '../database/connection';
 
 class Accidents {
 

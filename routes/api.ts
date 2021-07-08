@@ -1,7 +1,7 @@
-import { Router } from 'express'
-import { get, toNumber } from 'lodash'
+import { Router } from 'express';
+import { get, toNumber } from 'lodash';
 
-import Accidents from '../services/accidents-service'
+import Accidents from '../services/accidents-service';
 
 const router = Router();
 
