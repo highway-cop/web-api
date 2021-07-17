@@ -16,6 +16,7 @@
     },
     "homepage": "https://github.com/highway-cop/web-api#readme",
     "devDependencies": {
+        "@highway-cop/road-domain": "0.0.1",
         "@types/cors": "^2.8.11",
         "@types/express": "^4.17.13",
         "@types/lodash": "^4.14.171",

@@ -11,6 +11,9 @@
         "noImplicitReturns": true,
         "noImplicitOverride": true,
         "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true
-    }
+        "forceConsistentCasingInFileNames": true,
+        "types": [
+            "@highway-cop/road-domain"
+        ]
+    },
 }
