@@ -1,22 +1,32 @@
 import { upperCase } from 'lodash';
 
-import Accident from '../models/accident';
-import Geolocation from '../models/geolocation';
-
 import Mongo from '../database/connection';
 
 class Accidents {
 
-    public static getByCity(name: string, offset: number = 0, limit: number = 50): Promise<Geolocation[]> {
+    public static getByCity(name: string, offset: number = 0, limit: number = 50): Promise<road.domain.AccidentByCityResponse[]> {
         const city = upperCase(name);
 
         return Mongo.db
-            .collection<Accident>('accidents')
+            .collection<road.domain.Accident>('accidents')
             .find({ municipio: city })
-            .project<Geolocation>({
+            .project<road.domain.AccidentByCityResponse>({
                 _id: false,
-                lat: '$latitude',
-                lng: '$longitude'
+                date: {
+                    $dateToString: {
+                        format: "%d/%m/%Y",
+                        date: "$data"
+                    }
+                },
+                city: '$municipio',
+                road: '$br',
+                km: '$km',
+                type: '$tipo_acidente',
+                reason: '$causa_acidente',
+                location: {
+                    lat: '$latitude',
+                    lng: '$longitude'
+                }
             })
             .skip(offset)
             .limit(limit)
