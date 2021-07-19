@@ -17,4 +17,16 @@ router.get('/accidents/city', (req, res) => {
         });
 });
 
+router.get('/accidents/near', (req, res) => {
+    const lng = toNumber(get(req.query, 'lng', 0));
+    const lat = toNumber(get(req.query, 'lat', 0));
+
+    const range = Math.min(toNumber(get(req.query, 'range', 1000)), 60000);
+
+    Accidents.getNear(lng, lat, range)
+        .then(accidents => {
+            res.status(200).json(accidents);
+        });
+});
+
 export { router };
