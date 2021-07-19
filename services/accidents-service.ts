@@ -24,8 +24,12 @@ class Accidents {
                 type: '$tipo_acidente',
                 reason: '$causa_acidente',
                 location: {
-                    lat: '$latitude',
-                    lng: '$longitude'
+                    lat: {
+                        $arrayElemAt: ['$localizacao.coordinates', 1]
+                    },
+                    lng: {
+                        $arrayElemAt: ['$localizacao.coordinates', 0]
+                    }
                 }
             })
             .skip(offset)
