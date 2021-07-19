@@ -39,7 +39,7 @@ class Accidents {
             .toArray();
     }
 
-    public static getNear(lng: number, lat: number, range: number = 50000): Promise<road.domain.AccidentProjection[]> {
+    public static getNear(lng: number, lat: number, range: number = 10000): Promise<road.domain.AccidentProjection[]> {
         return Mongo.db
             .collection<road.domain.Accident>('accidents')
             .find({
